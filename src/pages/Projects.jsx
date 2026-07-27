@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Layers, Server, Code, Monitor } from 'lucide-react';
+import { trackProjectClick } from '../utils/analytics';
 
 const GithubIcon = ({ size = 20, ...props }) => (
   <svg
@@ -267,6 +268,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-link"
+                        onClick={() => trackProjectClick(project.title, 'github', project.github)}
                       >
                         <GithubIcon size={16} /> Source Code
                       </a>
@@ -277,6 +279,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-link"
+                        onClick={() => trackProjectClick(project.title, 'demo', project.link)}
                       >
                         <ExternalLink size={16} /> Live Demo
                       </a>

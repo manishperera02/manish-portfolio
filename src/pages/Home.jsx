@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download, ArrowRight, Mail, Code, Brain, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackResumeDownload, trackSocialClick } from '../utils/analytics';
 
 const GithubIcon = ({ size = 20, ...props }) => (
   <svg
@@ -178,7 +179,12 @@ const Home = () => {
                 alignItems: 'center',
               }}
             >
-              <a href="/Manish_Perera_CV.pdf" download className="btn btn-primary">
+              <a
+                href="/Manish_Perera_CV.pdf"
+                download
+                className="btn btn-primary"
+                onClick={() => trackResumeDownload('Manish_Perera_CV.pdf')}
+              >
                 <Download size={16} />
                 Download CV
               </a>
@@ -301,6 +307,7 @@ const Home = () => {
                       title={s.label}
                       target={s.href.startsWith('http') ? '_blank' : undefined}
                       rel="noopener noreferrer"
+                      onClick={() => trackSocialClick(s.label, s.href)}
                       style={{
                         display: 'flex',
                         alignItems: 'center',

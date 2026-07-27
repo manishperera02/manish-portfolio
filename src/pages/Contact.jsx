@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react';
+import { trackContactSubmit, trackSocialClick } from '../utils/analytics';
 
 const GithubIcon = ({ size = 20, ...props }) => (
   <svg
@@ -133,6 +134,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    trackContactSubmit('Portfolio Contact Form');
 
     const mailtoLink = `mailto:manishsjc12@gmail.com?subject=${encodeURIComponent(
       formData.subject || `Contact from ${formData.name}`
@@ -213,6 +215,7 @@ const Contact = () => {
                   href={item.href}
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel="noopener noreferrer"
+                  onClick={() => trackSocialClick(item.label, item.href)}
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
@@ -302,6 +305,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={s.label}
+                    onClick={() => trackSocialClick(s.label, s.href)}
                     style={{
                       display: 'flex',
                       alignItems: 'center',

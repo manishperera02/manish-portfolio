@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, Download } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackResumeDownload } from '../utils/analytics';
 
 const navLinks = [
   { name: 'Home',           path: '/' },
@@ -101,6 +102,7 @@ const Navbar = () => {
           <a
             href="/Manish_Perera_CV.pdf"
             download
+            onClick={() => trackResumeDownload('Manish_Perera_CV.pdf')}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -172,7 +174,7 @@ const Navbar = () => {
                   style={{
                     display: 'block',
                     padding: '0.7rem 1rem',
-                    borderRadius: '9px',
+                    borderRadius: '99px',
                     fontSize: '0.925rem',
                     fontWeight: active ? '600' : '500',
                     color: active ? 'var(--accent-primary)' : 'var(--text-secondary)',
@@ -187,6 +189,7 @@ const Navbar = () => {
             <a
               href="/Manish_Perera_CV.pdf"
               download
+              onClick={() => trackResumeDownload('Manish_Perera_CV.pdf')}
               style={{
                 display: 'flex',
                 alignItems: 'center',

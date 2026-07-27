@@ -1,5 +1,6 @@
 import { MessageCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackSocialClick } from '../utils/analytics';
 
 const GithubIcon = ({ size = 20, ...props }) => (
   <svg
@@ -150,6 +151,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={s.label}
+                onClick={() => trackSocialClick(s.label, s.href)}
                 style={{
                   width: '32px', height: '32px',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
