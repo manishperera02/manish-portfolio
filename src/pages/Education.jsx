@@ -4,17 +4,17 @@ import { GraduationCap, Calendar, BookOpen, MapPin } from 'lucide-react';
 const educationData = [
   {
     id: 1,
-    degree: 'BSc (Hons) Computer Science',
+    degree: 'BSc (Hons) Computer Science with Industrial Experience',
     institution: 'Informatics Institute of Technology affiliated with University of Westminster, UK',
     period: 'Sep 2022 – Sep 2026',
     location: 'Colombo, Sri Lanka',
     description:
-      'Pursuing an honours degree in Computer Science through IIT, affiliated with the University of Westminster, UK. Gaining a strong foundation in software engineering, data structures, algorithms, and modern computing principles.',
+      'Graduated with Upper Second Class Honours in Computer Science with Industrial Experience from Informatics Institute of Technology (IIT), affiliated with the University of Westminster, UK. Gained a strong foundation in software engineering, data structures, algorithms, and modern computing principles.',
     highlights: [
       'University of Westminster, UK',
+      'Upper Second Class Honours',
+      'Industrial Experience',
       'Software Engineering',
-      'Data Structures & Algorithms',
-      'In Progress',
     ],
   },
   {

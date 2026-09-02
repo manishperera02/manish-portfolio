@@ -139,7 +139,7 @@ const Home = () => {
                 letterSpacing: '-0.01em',
               }}
             >
-              Software Developer & Final Year CS Student
+              Software Developer & CS Graduate
             </p>
 
             {/* Bio */}
@@ -152,11 +152,11 @@ const Home = () => {
                 maxWidth: '520px',
               }}
             >
-              BSc (Hons) Computer Science student at IIT, affiliated with the
-              University of Westminster, UK. I build impactful web applications
-              and ML-powered platforms — from explainable AI dashboards to
-              emergency response systems. Passionate about clean code,
-              community leadership, and the beautiful game.
+              BSc (Hons) Upper Second Class graduate in Computer Science with Industrial
+              Experience from IIT, affiliated with the University of Westminster, UK.
+              I build impactful web applications and ML-powered platforms — from
+              explainable AI dashboards to emergency response systems. Passionate about
+              clean code, community leadership, and the beautiful game.
             </p>
 
             {/* Stats */}
@@ -289,7 +289,7 @@ const Home = () => {
                     marginBottom: '0.9rem',
                   }}
                 >
-                  BSc CS · IIT / Westminster UK
+                  BSc (Hons) Upper Second Class · IIT / Westminster UK
                 </p>
 
                 {/* Social Links */}

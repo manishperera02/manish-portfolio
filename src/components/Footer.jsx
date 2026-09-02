@@ -98,7 +98,7 @@ const Footer = () => {
               MP.
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.84rem', lineHeight: '1.65' }}>
-              Software Developer & Final Year CS Student based in Colombo, Sri Lanka.
+              Software Developer & CS Graduate based in Colombo, Sri Lanka.
             </p>
           </div>
 
